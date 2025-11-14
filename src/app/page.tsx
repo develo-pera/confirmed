@@ -7,13 +7,13 @@ import Testimonials from "@/components/landing/testimonials";
 
 export default function Home() {
   return (
-    <main className="">
+    <>
       <Hero />
       <TrustedBy />
       <Features />
       <Testimonials />
       <ExploreEvents />
       <ExploreCommunites />
-    </main>
+    </>
   );
 }

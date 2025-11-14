@@ -1,8 +1,7 @@
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import NavigationUserAvatar from "./navigation-user-avatar";
 
 const Header = () => {
-
   return (
     <div>
       <header className="max-w-6xl w-full mx-auto flex items-center justify-between gap-4 bg-background py-6 px-4">
@@ -23,9 +22,7 @@ const Header = () => {
             Communities
           </Link>
         </nav>
-        <div className="flex items-center justify-end">
-          <Button variant="secondary">Sign in</Button>
-        </div>
+        <NavigationUserAvatar />
       </header>
     </div>
   );
