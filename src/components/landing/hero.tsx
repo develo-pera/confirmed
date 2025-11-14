@@ -10,7 +10,7 @@ const Hero = () => {
       </p>
       <div className="flex items-center justify-center mt-10 gap-4">
         <Button variant="secondary">Create event for free</Button>
-        <Button variant="ghost">See how it works</Button>
+        {/* <Button variant="ghost">See how it works</Button> */}
       </div>
     </div>
   );
