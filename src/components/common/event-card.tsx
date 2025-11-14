@@ -33,7 +33,7 @@ const EventCard = ({
       </div>
 
       <div>
-        <div className="flex gap-2 items-center mt-8">
+        <div className="flex gap-2 items-center">
           {/* {
             guests?.length > 0 ? (
               <>
@@ -59,9 +59,9 @@ const EventCard = ({
 
         </div>
 
-        <div className="bg-[#222] p-2 mt-4">
-          <p className="text-[--textcolor] mb-1">{startTime} {endTime && ` - ${endTime}`}</p>
-          <p className="text-[--textcolor] mb-1">{address} {city && `, ${city}`}</p>
+        <div className="bg-[#222] p-2 mt-4 text-sm text-foreground/70">
+          <p>{startTime} {endTime && ` - ${endTime}`}</p>
+          <p>{address} {city && `, ${city}`}</p>
           <p>Stake ${stakeAmount} to commit</p>
         </div>
       </div>
