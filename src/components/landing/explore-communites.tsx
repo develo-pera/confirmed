@@ -1,0 +1,31 @@
+import { Button } from "../ui/button";
+
+const ExploreCommunites = () => {
+  return (
+    <div className="max-w-6xl w-full mx-auto px-4 py-20">
+      <h2 className="text-4xl font-bold mb-5">Communities live on Confirmed</h2>
+      <p className="text-foreground/50 max-w-5xl text-balance mb-10">Communities that are growing by doing epic events.</p>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="border border-foreground/10 rounded-md p-5">
+          <img src="/images/community-1.jpg" alt="Community 1" />
+          <p className="text-foreground/90">ETH Belgrade</p>
+          <p className="text-foreground/50 text-sm mt-3">1000 members</p>
+        </div>
+        <div className="border border-foreground/10 rounded-md p-5">
+          <img src="/images/community-2.jpg" alt="Community 2" />
+          <p className="text-foreground/90">ETH Floripa</p>
+          <p className="text-foreground/50 text-sm mt-3">1000 members</p>
+        </div>
+        <div className="border border-foreground/10 rounded-md p-5">
+          <img src="/images/community-3.jpg" alt="Community 3" />
+          <p className="text-foreground/90">Superteam Balkan</p>
+          <p className="text-foreground/50 text-sm mt-3">1000 members</p>
+        </div>
+      </div>
+
+      <Button variant="secondary" className="mt-10">View all communities</Button>
+    </div>
+  );
+}
+
+export default ExploreCommunites;
