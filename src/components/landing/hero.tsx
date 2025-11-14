@@ -9,7 +9,7 @@ const Hero = () => {
         With powerful tools like stake to secure your spot and advanced analytics, Confirmed will make success out of your every event.
       </p>
       <div className="flex items-center justify-center mt-10 gap-4">
-        <Button variant="secondary">Create event</Button>
+        <Button variant="secondary">Create event for free</Button>
         <Button variant="ghost">See how it works</Button>
       </div>
     </div>
