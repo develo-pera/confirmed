@@ -7,19 +7,19 @@ const ExploreCommunites = () => {
       <p className="text-foreground/50 max-w-5xl text-balance mb-10">Communities that are growing by doing epic events.</p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <div className="border border-foreground/10 rounded-md p-5">
-          <img src="/images/community-1.jpg" alt="Community 1" />
-          <p className="text-foreground/90">ETH Belgrade</p>
-          <p className="text-foreground/50 text-sm mt-3">1000 members</p>
+          <img className="w-12 h-12" src="/tmp/eth-bgd-sticker.svg" alt="Community 1" />
+          <p className="text-foreground/90 mt-3">ETH Belgrade</p>
+          <p className="text-foreground/50 text-sm">1000 members</p>
         </div>
         <div className="border border-foreground/10 rounded-md p-5">
-          <img src="/images/community-2.jpg" alt="Community 2" />
-          <p className="text-foreground/90">ETH Floripa</p>
-          <p className="text-foreground/50 text-sm mt-3">1000 members</p>
+          <img className="w-12 h-12" src="/tmp/ethf.png" alt="Community 2" />
+          <p className="text-foreground/90 mt-3">ETH Floripa</p>
+          <p className="text-foreground/50 text-sm">1000 members</p>
         </div>
         <div className="border border-foreground/10 rounded-md p-5">
-          <img src="/images/community-3.jpg" alt="Community 3" />
-          <p className="text-foreground/90">Superteam Balkan</p>
-          <p className="text-foreground/50 text-sm mt-3">1000 members</p>
+          <img className="w-12 h-12" src="/tmp/st.png" alt="Community 3" />
+          <p className="text-foreground/90 mt-3">Superteam Balkan</p>
+          <p className="text-foreground/50 text-sm">1000 members</p>
         </div>
       </div>
 
