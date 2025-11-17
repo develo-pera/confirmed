@@ -1,4 +1,4 @@
-import { Button } from "../ui/button";
+import { RainbowButton } from "@/components/ui/rainbow-button"
 
 const Hero = () => {
   return (
@@ -10,7 +10,9 @@ const Hero = () => {
         Confirmed gives you the tools to run world-class events — from staking-based RSVP, to advanced analytics, and engagement insights that turn every event into a success story.
       </p>
       <div className="flex items-center justify-center mt-10 gap-4">
-        <Button variant="secondary">Create event for free</Button>
+        <RainbowButton>
+          Create event for free
+        </RainbowButton>
         {/* <Button variant="ghost">See how it works</Button> */}
       </div>
     </div>
