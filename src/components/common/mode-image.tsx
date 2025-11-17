@@ -9,13 +9,13 @@ const ModeImage = ({ image, imageDark, alt, ...props }: { image: string, imageDa
 
   if (theme === "dark") {
     return (
-      <Image {...props} className={cn("w-auto", props.className)} src={imageDark} alt={alt} width={100} height={100} /> // TODO: fix hardcoded width and height
+      <Image {...props} className={cn("w-auto", props.className)} src={imageDark} alt={alt} /> // TODO: fix hardcoded width and height
     );
   }
 
   return (
     <div>
-      <Image {...props} className={cn("w-auto", props.className)} src={image} alt={alt} width={100} height={100} /> {/* TODO: fix hardcoded width and height */}
+      <Image {...props} className={cn("w-auto", props.className)} src={image} alt={alt} /> {/* TODO: fix hardcoded width and height */}
     </div>
   );
 }
