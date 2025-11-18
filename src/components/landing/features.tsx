@@ -23,8 +23,8 @@ const Features = () => {
             inactiveZone={0.01}
             borderWidth={1}
           />
-          <h3 className="text-2xl font-bold mb-3">Understand your audience</h3>
-          <p className="text-foreground/50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+          <h3 className="text-xl font-bold mb-2">Understand your audience</h3>
+          <p className="text-foreground/50 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
         </div>
         <div className={cn(
           "border border-foreground/10 rounded-md p-5 relative",
@@ -40,8 +40,8 @@ const Features = () => {
             inactiveZone={0.01}
             borderWidth={1}
           />
-          <h3 className="text-2xl font-bold mb-3">RSVP with skin in the game</h3>
-          <p className="text-foreground/50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+          <h3 className="text-xl font-bold mb-2">RSVP with skin in the game</h3>
+          <p className="text-foreground/50 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
         </div>
         <div className={cn(
           "border border-foreground/10 rounded-md p-5 relative",
@@ -57,8 +57,8 @@ const Features = () => {
             inactiveZone={0.01}
             borderWidth={1}
           />
-          <h3 className="text-2xl font-bold mb-3">Mesure your success</h3>
-          <p className="text-foreground/50">Mesure your success sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+          <h3 className="text-xl font-bold mb-2">Mesure your success</h3>
+          <p className="text-foreground/50 text-sm">Mesure your success sit amet consectetur adipisicing elit. Quisquam, quos.</p>
         </div>
         <div className={cn(
           "border border-foreground/10 rounded-md p-5 relative",
@@ -74,8 +74,8 @@ const Features = () => {
             inactiveZone={0.01}
             borderWidth={1}
           />
-          <h3 className="text-2xl font-bold mb-3">Engage your community</h3>
-          <p className="text-foreground/50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+          <h3 className="text-xl font-bold mb-2">Engage your community</h3>
+          <p className="text-foreground/50 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
         </div>
         <div className={cn(
           "border border-foreground/10 rounded-md p-5 relative",
@@ -91,8 +91,8 @@ const Features = () => {
             inactiveZone={0.01}
             borderWidth={1}
           />
-          <h3 className="text-2xl font-bold mb-3">Get sponsorships</h3>
-          <p className="text-foreground/50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+          <h3 className="text-xl font-bold mb-2">Get sponsorships</h3>
+          <p className="text-foreground/50 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
         </div>
       </div>
     </div>
