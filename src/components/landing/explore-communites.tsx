@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 const ExploreCommunites = () => {
   return (
-    <div className="max-w-6xl w-full mx-auto px-4 py-20">
+    <div id="communities" className="max-w-6xl w-full mx-auto px-4 py-20">
       <h2 className="text-4xl font-bold mb-5">Communities live on Confirmed</h2>
       <p className="text-foreground/50 max-w-5xl text-balance mb-10">Communities that are growing by doing epic events.</p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

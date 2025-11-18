@@ -158,6 +158,7 @@
   * {
     @apply border-border outline-ring/50;
     font-family: var(--font-inter);
+    scroll-behavior: smooth;
     /* font-family: var(--font-geist-sans); */
   }
 

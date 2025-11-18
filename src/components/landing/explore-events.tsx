@@ -48,7 +48,7 @@ const eventsMocks = [
 
 const ExploreEvents = () => {
   return (
-    <div className="max-w-6xl w-full mx-auto px-4 py-20">
+    <div id="events" className="max-w-6xl w-full mx-auto px-4 py-20">
       <h2 className="text-4xl font-bold mb-5">Explore Events</h2>
       {/* <p className="text-foreground/50 max-w-5xl text-balance mb-10">Discover the latest events and communities on Confirmed. Join the community and get the latest updates.</p> */}
       <p className="text-foreground/50 max-w-5xl text-balance mb-10">Discover the latest events on Confirmed.</p>
