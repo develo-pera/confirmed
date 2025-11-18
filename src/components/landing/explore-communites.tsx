@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
 
@@ -35,8 +36,9 @@ const ExploreCommunites = () => {
           <p className="text-foreground/50 text-sm">1000 members</p>
         </div>
       </div>
-
-      <Button variant="secondary" className="mt-10">View all communities</Button>
+      <Link href="/communities">
+        <Button variant="secondary" className="mt-10">View all communities</Button>
+      </Link>
     </div>
   );
 }
