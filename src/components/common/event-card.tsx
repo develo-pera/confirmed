@@ -25,7 +25,13 @@ const EventCard = ({
   className: string,
 }) => {
   return (
-    <Card className={cn("p-3 bg-[#161616] rounded-sm flex flex-col justify-between cursor-pointer", className)}>
+    <Card className={cn(
+      "p-3 bg-[#161616] rounded-sm flex flex-col justify-between cursor-pointer",
+      "bg-gradient-to-b from-muted/50 to-muted/10",
+      "hover:from-muted/60 hover:to-muted/20",
+      "transition-colors duration-300",
+      className
+    )}>
       <div>
         <img src={image} alt="" />
         <p className="mt-5 font-semibold text-2xl">{title}</p>
