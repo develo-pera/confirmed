@@ -58,6 +58,21 @@
     }
   }
 
+  --animate-marquee: marquee 10s linear infinite;
+
+  --color-brand-foreground: var(----brand-foreground);
+
+  --color-brand: var(----brand);
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
 }
 
 :root {
@@ -99,6 +114,8 @@
   --color-3: 210 100% 63%;
   --color-4: 195 100% 63%;
   --color-5: 90 100% 63%;
+  --brand: hsl(266 100% 50%);
+  --brand-foreground: hsl(270 100% 98%);
 }
 
 .dark {
@@ -135,6 +152,8 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.552 0.016 285.938);
   --element-background: oklch(0.252 0.000 0);
+  --brand: hsl(266 70% 60%);
+  --brand-foreground: hsl(270 100% 98%);
 }
 
 @layer base {
@@ -146,5 +165,9 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  .marquee-animation {
+    animation: marquee 10s linear infinite;
   }
 }
