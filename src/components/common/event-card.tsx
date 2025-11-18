@@ -65,7 +65,7 @@ const EventCard = ({
 
         </div>
 
-        <div className="bg-[#222] p-2 mt-4 text-sm text-foreground/70">
+        <div className="dark:bg-[#222] bg-muted/50 p-2 mt-4 text-sm text-foreground/70">
           <p>{startTime} {endTime && ` - ${endTime}`}</p>
           <p>{address} {city && `, ${city}`}</p>
           <p>Stake ${stakeAmount} to commit</p>
