@@ -58,8 +58,6 @@
     }
   }
 
-  --animate-marquee: marquee 10s linear infinite;
-
   --color-brand-foreground: var(----brand-foreground);
 
   --color-brand: var(----brand);
@@ -168,6 +166,6 @@
   }
 
   .marquee-animation {
-    animation: marquee 10s linear infinite;
+    animation: marquee 30s linear infinite;
   }
 }

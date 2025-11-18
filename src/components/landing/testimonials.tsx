@@ -42,6 +42,10 @@ const Testimonials = () => {
       <TestimonialsMarquee
         testimonials={testimonials}
       />
+      <TestimonialsMarquee
+        testimonials={testimonials}
+        direction="right"
+      />
       <Pointer>
         <motion.div
           animate={{
