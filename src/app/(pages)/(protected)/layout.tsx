@@ -1,16 +1,11 @@
-"use client";
 
-import { usePrivy } from "@privy-io/react-auth";
+import { verifySession } from "@/lib/dal";
 import { redirect } from "next/navigation";
 
-const ProtectedLayout = ({ children }: { children: React.ReactNode }) => {
-  const { authenticated, ready } = usePrivy();
+const ProtectedLayout = async ({ children }: { children: React.ReactNode }) => {
+  const { isAuthenticated } = await verifySession();
 
-  if (!ready) {
-    return <div>Loading...</div>;
-  }
-
-  if (!authenticated) {
+  if (!isAuthenticated) {
     redirect("/");
   }
 

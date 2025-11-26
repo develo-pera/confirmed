@@ -1,20 +1,19 @@
-"use client";
+"use client"
 
-import { usePrivy } from "@privy-io/react-auth";
 import Link from "next/link";
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu";
-import SigninButton from "./signin-button";
+import useUser from "@/hooks/useUser";
+import { deleteSession } from "@/lib/session";
+import { Skeleton } from "../ui/skeleton";
 
 const NavigationUserAvatar = () => {
-  const { authenticated, logout } = usePrivy();
+  const { data, isLoading } = useUser();
 
-  if (!authenticated) {
-    return (
-      <div>
-        <SigninButton />
-      </div>
-    );
+  if (isLoading) {
+    return <Skeleton className="h-10 w-10 rounded-full bg-foreground/10" />
   }
+
+  console.log(data);
 
   return (
     <DropdownMenu>
@@ -29,7 +28,7 @@ const NavigationUserAvatar = () => {
           <Link href="/settings">Settings</Link>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
-          <div onClick={logout}>Logout</div>
+          <div onClick={deleteSession}>Logout</div>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

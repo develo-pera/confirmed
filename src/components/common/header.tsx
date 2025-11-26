@@ -1,5 +1,5 @@
 import Link from "next/link";
-import NavigationUserAvatar from "./navigation-user-avatar";
+import NavigationUser from "./navigation-user";
 import ModeImage from "./mode-image";
 
 const LANDING_PAGE_NAVIGATION = [
@@ -52,7 +52,7 @@ const Header = ({ isLandingPage = false }: { isLandingPage?: boolean }) => {
             </Link>
           ))}
         </nav>
-        <NavigationUserAvatar />
+        <NavigationUser />
       </header>
     </div>
   );
