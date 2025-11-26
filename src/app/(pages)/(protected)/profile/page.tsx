@@ -1,14 +1,9 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { usePrivy } from "@privy-io/react-auth";
 import Link from "next/link";
 
 const ProfilePage = () => {
-  const { user, logout } = usePrivy();
-
-  console.log("user", user);
-
   return (
     <div className="max-w-6xl w-full mx-auto px-4 py-20 mt-20">
       <div>
@@ -63,9 +58,6 @@ const ProfilePage = () => {
           </p>
         </div>
       </div>
-      {/* <div className="mb-5">
-        <pre className="text-sm">{JSON.stringify(user, null, 2)}</pre>
-      </div> */}
     </div>
   );
 }

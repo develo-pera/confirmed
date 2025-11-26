@@ -1,7 +1,6 @@
 "use client";
 
 import { ThemeProvider } from "./theme-provider";
-import PrivyProviderWrapper from "./privy-provider";
 import { AuthProvider } from "./auth-provider";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
@@ -15,13 +14,11 @@ export default function Providers({ children }: { children: React.ReactNode }) {
       enableSystem
       disableTransitionOnChange
     >
-      <PrivyProviderWrapper>
-        <AuthProvider>
-          <QueryClientProvider client={queryClient}>
-            {children}
-          </QueryClientProvider>
-        </AuthProvider>
-      </PrivyProviderWrapper>
+      <AuthProvider>
+        <QueryClientProvider client={queryClient}>
+          {children}
+        </QueryClientProvider>
+      </AuthProvider>
     </ThemeProvider >
   );
 }
