@@ -7,13 +7,13 @@ import { deleteSession } from "@/lib/session";
 import { Skeleton } from "../ui/skeleton";
 
 const NavigationUserAvatar = () => {
-  const { data, isLoading } = useUser();
+  const { data: user, isLoading } = useUser();
 
   if (isLoading) {
     return <Skeleton className="h-10 w-10 rounded-full bg-foreground/10" />
   }
 
-  console.log(data);
+  console.log(user);
 
   return (
     <DropdownMenu>
@@ -22,7 +22,7 @@ const NavigationUserAvatar = () => {
       </DropdownMenuTrigger>
       <DropdownMenuContent className="mt-2" align="end">
         <DropdownMenuItem asChild>
-          <Link href="/profile">View Profile</Link>
+          <Link href={`/user/${user?.username || user.id}`}>View Profile</Link>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
           <Link href="/settings">Settings</Link>
