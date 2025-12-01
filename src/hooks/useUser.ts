@@ -1,7 +1,9 @@
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import apiClient from "@/lib/api-client";
 
 const useUser = () => {
+  const queryClient = useQueryClient();
+
   const { data, isLoading } = useQuery({
     queryKey: ["user"],
     queryFn: async () => {
@@ -20,7 +22,17 @@ const useUser = () => {
     // enabled: !!getSession()
   });
 
-  return { data, isLoading };
+  const updateUser = useMutation({
+    mutationFn: async (data: any) => {
+      const response = await apiClient.put(`/users`, data);
+      return response.data;
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["user"] });
+    }
+  });
+
+  return { data, isLoading, updateUser };
 }
 
 export default useUser;

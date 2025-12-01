@@ -71,6 +71,12 @@
       transform: translateX(-50%);
     }
   }
+
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-color-destructive-foreground: var(----color-destructive-foreground);
+
+  --color-color-color-destructive-foreground: var(----color-color-destructive-foreground)
 }
 
 :root {
@@ -114,6 +120,7 @@
   --color-5: 90 100% 63%;
   --brand: hsl(266 100% 50%);
   --brand-foreground: hsl(270 100% 98%);
+  --destructive-foreground: oklch(1 0 0);
 }
 
 .dark {
@@ -152,6 +159,7 @@
   --element-background: oklch(0.252 0.000 0);
   --brand: hsl(266 70% 60%);
   --brand-foreground: hsl(270 100% 98%);
+  --destructive-foreground: oklch(1 0 0);
 }
 
 @layer base {

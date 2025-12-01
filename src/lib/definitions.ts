@@ -7,6 +7,8 @@ type User = {
   bio: string | null;
   website: string | null;
   twitter: string | null;
+  instagram: string | null;
+  github: string | null;
   linkedin: string | null;
   farcaster: string | null;
 }

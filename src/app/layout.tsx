@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import Providers from "@/components/providers/providers";
-import CompleteProfileOverlay from "@/components/common/complete-profile-overlay";
+import { Toaster } from "@/components/ui/sonner";
+// import CompleteProfileOverlay from "@/components/common/complete-profile-overlay";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -51,6 +52,7 @@ export default function RootLayout({
             {children}
           </div>
           {/* <CompleteProfileOverlay /> */}
+          <Toaster />
         </Providers>
       </body>
     </html >

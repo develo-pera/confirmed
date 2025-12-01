@@ -1,5 +1,5 @@
 import axios from "axios";
-import { deleteSession, getSession, refreshToken, refreshTokenAvailable } from "./session";
+import { deleteSession, getSession, refreshToken } from "./session";
 
 const apiClient = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_URL,
