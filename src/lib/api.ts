@@ -15,6 +15,9 @@ export async function getUserByIdentifier(identifier: string) {
     };
   } catch (error) {
     console.error(error);
-    return null;
+    return {
+      user: null,
+      canonical: null,
+    };
   }
 }

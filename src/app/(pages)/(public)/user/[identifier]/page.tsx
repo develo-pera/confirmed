@@ -1,4 +1,4 @@
-import { permanentRedirect } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { getUserByIdentifier } from "@/lib/api";
 import { User } from "@/lib/definitions";
 import UserHeader from "@/components/common/user/user-header";
@@ -13,7 +13,7 @@ const UserPage = async ({ params }: { params: Promise<{ identifier: string }> })
   console.log("user", user);
 
   if (!user) {
-    return <div>User not found</div>;
+    return notFound();
   }
 
   if (canonical !== identifier) {
