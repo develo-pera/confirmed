@@ -18,6 +18,7 @@ import { uploadFileToS3 } from "@/lib/helpers";
 import { toast } from "sonner";
 import { UseMutationResult } from "@tanstack/react-query";
 import { stripUrl, URL_PATTERN } from "@/lib/helpers";
+import { Label } from "@/components/ui/label";
 
 const schema = z.object({
   avatar: z.union([z.string(), z.literal("")]).optional(),
@@ -90,8 +91,10 @@ const EditProfileSection = ({ user, updateUser }: { user: User, updateUser: UseM
             setAvatar(file);
           }} defaultAvatar={user?.avatar || undefined} />
           <div className="space-y-2 w-full">
+            <Label className="block text-sm font-medium text-foreground/50 mb-1" htmlFor="name">Name</Label>
             <Input type="text" placeholder="Name" className="!bg-transparent" {...register("name")} aria-invalid={errors.name ? "true" : "false"} aria-describedby={errors.name ? errors.name.message : undefined} />
             <InputError error={errors.name} />
+            <Label className="block text-sm font-medium text-foreground/50 mb-1" htmlFor="username">Username</Label>
             <InputGroup className="!bg-transparent" >
               <InputGroupInput type="text" placeholder="Username" {...register("username")} aria-invalid={errors.username ? "true" : "false"} aria-describedby={errors.username ? errors.username.message : undefined} />
               <InputGroupAddon>
@@ -99,12 +102,16 @@ const EditProfileSection = ({ user, updateUser }: { user: User, updateUser: UseM
               </InputGroupAddon>
             </InputGroup>
             <InputError error={errors.username} />
+            <Label className="block text-sm font-medium text-foreground/50 mb-1" htmlFor="email">Email</Label>
             <Input type="text" placeholder="Email" className="!bg-transparent" {...register("email")} aria-invalid={errors.email ? "true" : "false"} aria-describedby={errors.email ? errors.email.message : undefined} />
             <InputError error={errors.email} />
           </div>
         </div>
 
-        <Textarea placeholder="Bio" className="!bg-transparent md:max-w-[calc(50%-4px)]" {...register("bio")} />
+        <Label className="block text-sm font-medium text-foreground/50 mb-1" htmlFor="bio">Bio</Label>
+        <Textarea placeholder="Bio" className="!bg-transparent" {...register("bio")} />
+
+        <p className="text-sm font-medium text-foreground/50 mb-1">Socials</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 items-start gap-2 mb-5">
           <div>
             <InputGroup className="!bg-transparent" >
