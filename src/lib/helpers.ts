@@ -28,6 +28,12 @@ export const addUrlPrefix = (url: string, prefix: string) => {
   return `${prefix}${url}`;
 }
 
+export const applyUTMSource = (url: string) => {
+  const urlObject = new URL(url);
+  urlObject.searchParams.set("utm_source", "confirmed.events");
+  return urlObject.toString();
+}
+
 export const uploadFileToS3 = async (file: File, folder: string): Promise<{ s3Url: string, fullPath: string }> => {
   if (!process.env.NEXT_PUBLIC_AWS_BUCKET_NAME || !process.env.NEXT_PUBLIC_AWS_ACCESS_KEY_ID || !process.env.NEXT_PUBLIC_AWS_SECRET_ACCESS_KEY) {
     throw new Error("AWS credentials are not set");

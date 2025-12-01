@@ -1,7 +1,7 @@
 import React from "react";
 import { Url } from "next/dist/shared/lib/router/router";
 import Link from "next/link";
-import { addUrlPrefix, stripUrl, URL_PATTERN, URL_PREFIX } from "@/lib/helpers";
+import { addUrlPrefix, stripUrl, URL_PATTERN, URL_PREFIX, applyUTMSource } from "@/lib/helpers";
 
 type UserLinks = {
   website?: Url | null;
@@ -16,7 +16,7 @@ const UserHeaderLinks = ({ website, x, linkedin, farcaster }: UserLinks) => {
   if (website) {
     links.push({
       label: stripUrl(website.toString(), URL_PATTERN.website),
-      href: website,
+      href: applyUTMSource(website.toString()),
     });
   }
   if (x) {

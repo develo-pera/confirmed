@@ -2,8 +2,6 @@ import Image from "next/image";
 import { Skeleton } from "@/components/ui/skeleton";
 import { User } from "@/lib/definitions";
 import UserHeaderLinks from "./user-header-links";
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
-
 
 const UserHeader = ({ user, isLoading }: { user: User, isLoading: boolean }) => {
 
