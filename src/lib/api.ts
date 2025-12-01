@@ -1,7 +1,6 @@
 import apiClient from "./api-client";
 
 export async function getUserByIdentifier(identifier: string) {
-
   try {
     const res = await apiClient.get(`/users?identifier=${identifier}`);
 
@@ -14,7 +13,7 @@ export async function getUserByIdentifier(identifier: string) {
       canonical: res.data.canonical,
     };
   } catch (error) {
-    console.error(error);
+    console.log(error);
     return {
       user: null,
       canonical: null,

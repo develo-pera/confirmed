@@ -37,7 +37,7 @@ const Header = ({ isLandingPage = false }: { isLandingPage?: boolean }) => {
 
   return (
     <div>
-      <header className="w-full mx-auto flex items-center justify-between gap-4 bg-background py-6 px-4">
+      <header className="w-full max-w-6xl mx-auto flex items-center justify-between gap-4 bg-background py-6 px-4">
         <Link href="/">
           <ModeImage className="w-[150px]" imageDark="/logo.svg" image="/logo-light.svg" alt="Commit logo" width={150} height={26.66} />
         </Link>

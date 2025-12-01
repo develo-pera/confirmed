@@ -178,3 +178,17 @@
     animation: marquee 30s linear infinite;
   }
 }
+
+.imgDark {
+  display: none;
+}
+
+/* default (light) shows .imgLight, hides .imgDark */
+
+.dark .imgLight {
+  display: none;
+}
+
+.dark .imgDark {
+  display: initial;
+}
