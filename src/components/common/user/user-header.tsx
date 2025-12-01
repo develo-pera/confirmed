@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Skeleton } from "@/components/ui/skeleton";
 import { User } from "@/lib/definitions";
 import UserHeaderLinks from "./user-header-links";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 
 
 const UserHeader = ({ user, isLoading }: { user: User, isLoading: boolean }) => {
@@ -14,7 +15,7 @@ const UserHeader = ({ user, isLoading }: { user: User, isLoading: boolean }) => 
     <div className="flex items-center gap-5">
       {
         user?.avatar ? (
-          <Image src={user.avatar} alt={user.name || "User" + " profile picture"} width={104} height={104} className="rounded-full w-26 h-26" />
+          <Image src={user.avatar} alt={user.name || "User" + " profile picture"} width={104} height={104} className="rounded-full w-26 h-26 object-cover" />
         ) : (
           <div className="w-26 h-26 rounded-full bg-foreground/10" />
         )

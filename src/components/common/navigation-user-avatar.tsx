@@ -20,7 +20,7 @@ const NavigationUserAvatar = () => {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         {user?.avatar ? (
-          <Image src={user.avatar} alt={user.name || "User" + " profile picture"} width={40} height={40} className="rounded-full w-10 h-10" />
+          <Image src={user.avatar} alt={user.name || "User" + " profile picture"} width={40} height={40} className="rounded-full w-10 h-10 object-cover" />
         ) : (
           <div className="w-10 h-10 rounded-full bg-foreground/10" />
         )}
