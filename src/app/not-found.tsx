@@ -1,6 +1,6 @@
-// import { Button } from "@/components/ui/button";
+import { Button } from "../components/ui/button";
 import Image from "next/image";
-// import Link from "next/link";
+import Link from "next/link";
 
 const NotFound = () => {
   return (
@@ -8,11 +8,13 @@ const NotFound = () => {
       <Image className="mb-4" src="/glove-thumb-down.png" alt="Not Found thumb down" width={50} height={50} />
       <p className="text-xl font-bold">Not Found</p>
       <p className="text-sm text-foreground/50">The page you are looking for does not exist.</p>
-      {/* <Button variant="outline" asChild className="mt-4">
-        <Link href="/">Go to home</Link>
-      </Button> */}
+      <Link href="/">
+        <Button variant="outline" className="mt-4">
+          Go to home
+        </Button>
+      </Link>
     </div>
   );
 }
 
-export default NotFound;
+export default NotFound; 
